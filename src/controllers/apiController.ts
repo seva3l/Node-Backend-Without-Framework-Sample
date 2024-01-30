@@ -1,7 +1,7 @@
 import * as http from 'http';
-import collectRequestData from '../utils/requestUtils';
-import { fetchNobelPrizeData } from '../services/nobelPrizeService';
-import { RequestData } from '../interface/ index';
+import { collectRequestData } from '../utils';
+import { fetchNobelPrizeData } from '../services';
+import { RequestData } from '../interface/IRequest';
 
 
 export async function handleApiRequest(

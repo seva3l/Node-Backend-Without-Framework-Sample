@@ -1,6 +1,7 @@
 import axios from 'axios';
 import * as querystring from 'querystring';
-import { RequestData } from '../interface/ index';
+import { RequestData } from '../interface/IRequest';
+import { NobelResponse } from '../interface/IResponse';
 
 const apiUrl = "https://api.nobelprize.org/v1/laureate.json";
 
@@ -17,5 +18,5 @@ export async function fetchNobelPrizeData(params: RequestData = {}) {
   const urlWithParams = `${apiUrl}?${queryParams}`;
   const axiosResponse = await axios.get(urlWithParams);
 
-  return axiosResponse.data;
+  return axiosResponse.data as NobelResponse;
 }

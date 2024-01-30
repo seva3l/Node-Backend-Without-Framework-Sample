@@ -1,5 +1,5 @@
 import * as http from 'http';
-function collectRequestData(req: http.IncomingMessage, callback: { (requestData: any): Promise<void>; (arg0: any): void; }) {
+export function collectRequestData(req: http.IncomingMessage, callback: { (requestData: any): Promise<void>; (arg0: any): void; }) {
     let body = '';
   
     req.on('data', (chunk) => {
@@ -11,4 +11,3 @@ function collectRequestData(req: http.IncomingMessage, callback: { (requestData:
     });
   }
 
-export default collectRequestData;
