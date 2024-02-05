@@ -10,12 +10,12 @@ export async function handleApiRequest(
 ) {
   collectRequestData(req, async (requestData: RequestData) => {
     try {
-      const { firstname, lastname, category, year } = requestData;
+      const { firstname, surname, category, year } = requestData;
 
       // Validation
       if (
         (firstname && typeof firstname !== 'string') ||
-        (lastname && typeof lastname !== 'string') ||
+        (surname && typeof surname !== 'string') ||
         (category && typeof category !== 'string') ||
         (year && (typeof year !== 'number' || !(/^\d{4}$/.test(year.toString()))))
       ) {
@@ -25,7 +25,7 @@ export async function handleApiRequest(
       }
       const payload ={
         firstname,
-        lastname,
+        surname,
         category,
         year
       }

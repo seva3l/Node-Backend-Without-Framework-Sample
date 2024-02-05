@@ -1,6 +1,6 @@
 export interface RequestData {
-    firstname?: string;
-    lastname?: string;
-    category?: string;
-    year?: number;
+    firstname: string;
+    surname: string;
+    category: string;
+    year: number;
   }
